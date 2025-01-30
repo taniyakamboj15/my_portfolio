@@ -5,15 +5,23 @@ import Home from './Home';
 import Projects from './Projects';
 import Experience from './Experience';
 import Contact from './Contact';
+import {themeContext} from '../utils/themeContext';
+import { useState } from 'react';
 
 const AppLayout = () => {
+    const [isDarkMode,seIsDarkMode] = useState(false);
   return (
     <div className='bg-slate-200'>
+        <themeContext.Provider value={{isDarkMode,seIsDarkMode}}>
         <Header />
         <Outlet/>
+        </themeContext.Provider>
+
     </div>
+
   )
 }
+
 export const appRouter = createBrowserRouter([
     {
         path:"/",

@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import image from "../assets/dummy_logo.jpg"
 import { DARK_MODE , LIGHT_MODE} from '../utils/constants'
 import { Link, useLocation } from 'react-router-dom'
+import {themeContext} from '../utils/themeContext'
+
 
 const Header = () => {
+
     const location = useLocation();
-    const [isDarkMode,setIsDarkMode]=useState(false);
+  const {isDarkMode,setIsDarkMode}=useContext(themeContext);
     const handlerDarkMode=()=>{
         setIsDarkMode(!isDarkMode);
   
@@ -16,7 +19,7 @@ const Header = () => {
   return (
     <div className='flex flex-row justify-between items-center px-10 pt-2'>
         < div  className='flex items-center'>
-            <Link to="/"><img className='rounded-full w-24' src={image} alt="logo"></img></Link>
+            <Link to="/"><img className='rounded-full w-20' src={image} alt="logo"></img></Link>
             <h1 className='text-lg font-bold'>TANIYA</h1>
         </div> <div className='flex items-center gap-10'>
         <ul className='flex gap-10 font-bold '>
