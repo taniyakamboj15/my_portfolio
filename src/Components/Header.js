@@ -18,7 +18,7 @@ const Header = () => {
     console.log(location);
 
   return (
-    <div className='flex flex-row justify-between items-center md:px-10 px-4 pt-2'>
+    <div className='flex flex-row justify-between items-center md:px-10 px-4 pt-2 h-20 border-b-black w-full'>
         < div  className='flex items-center'>
             <Link to="/"><img className='rounded-full w-20' src={image} alt="logo"></img></Link>
             <h1 className='text-lg font-bold'>TANIYA</h1>
