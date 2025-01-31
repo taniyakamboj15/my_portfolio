@@ -9,10 +9,10 @@ import {themeContext} from '../utils/themeContext';
 import { useState } from 'react';
 
 const AppLayout = () => {
-    const [isDarkMode,seIsDarkMode] = useState(false);
+    const [isDarkMode,setIsDarkMode] = useState(false);
   return (
     <div className='bg-slate-200'>
-        <themeContext.Provider value={{isDarkMode,seIsDarkMode}}>
+        <themeContext.Provider value={{isDarkMode,setIsDarkMode}}>
         <Header />
         <Outlet/>
         </themeContext.Provider>
