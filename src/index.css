@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+    .mask-image {
+      -webkit-mask-image: url("../src/assets/bgimage/—Pngtree—paint\ effect\ brush\ mask\ black_6839833.png");
+      -webkit-mask-size: cover;
+      -webkit-mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-image: url("../src/assets/bgimage/—Pngtree—paint\ effect\ brush\ mask\ black_6839833.png");
+      mask-size: cover;
+      mask-position: center;
+      mask-repeat: no-repeat;
+    }
+  
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+  
