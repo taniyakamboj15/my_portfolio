@@ -11,7 +11,7 @@ import { useState } from 'react';
 const AppLayout = () => {
     const [isDarkMode,setIsDarkMode] = useState(false);
   return (
-    <div className='bg-slate-200'>
+    <div className={isDarkMode?"bg-black":"bg-slate-300"}>
         <themeContext.Provider value={{isDarkMode,setIsDarkMode}}>
         <Header />
         <Outlet/>

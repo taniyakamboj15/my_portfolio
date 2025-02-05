@@ -21,9 +21,9 @@ const Header = () => {
     <div className='flex flex-row justify-between items-center md:px-10 px-4 pt-2 h-20 border-b-black w-full'>
         < div  className='flex items-center'>
             <Link to="/"><img className='rounded-full w-20' src={image} alt="logo"></img></Link>
-            <h1 className='text-lg font-bold'>TANIYA</h1>
+            <h1 className={`text-lg font-bold ${isDarkMode?"text-white":"text-black"}`}>TANIYA</h1>
         </div> <div className='flex items-center md:gap-10 gap-4'>
-        <ul className='md:flex gap-10 font-bold hidden'>
+        <ul className={`md:flex gap-10 font-bold hidden ${isDarkMode?"text-white":"text-black"}`}>
             <Link to="/"><li className={`hover:text-red-500 hover:scale-105 hover:underline ${location.pathname==="/"?"text-red-400":""}`}>Home</li></Link>
             <Link to="/projects"><li className={`hover:text-red-500 hover:scale-105 hover:underline ${location.pathname==="/projects"?"text-red-400":""}`}>Projects</li></Link>
             <Link to="/experience"> <li className={`hover:text-red-500 hover:scale-105 hover:underline ${location.pathname==="/experience"?"text-red-400":""}`}>Experience</li></Link>
