@@ -7,14 +7,16 @@ import Experience from './Experience';
 import Contact from './Contact';
 import {themeContext} from '../utils/themeContext';
 import { useState } from 'react';
+import Footer from './Footer';
 
 const AppLayout = () => {
     const [isDarkMode,setIsDarkMode] = useState(false);
   return (
-    <div className={isDarkMode?"bg-black":"bg-slate-300"}>
+    <div className={isDarkMode?"bg-gray-800":"bg-slate-300"}>
         <themeContext.Provider value={{isDarkMode,setIsDarkMode}}>
         <Header />
         <Outlet/>
+        <Footer/>
         </themeContext.Provider>
 
     </div>

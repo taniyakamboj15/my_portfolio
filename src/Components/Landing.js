@@ -1,12 +1,13 @@
 import React, { useContext } from 'react'
 import { TypeAnimation } from 'react-type-animation';
 import { themeContext } from '../utils/themeContext';
+import Myprofile from "../assets/taniya_image.jpg";
 
 const Landing = () => {
   const {isDarkMode}= useContext(themeContext);
   return (
-    <div className='md:pt-40 pt-10 p-3 md:px-64  max-w-screen md:h-screen h-[1000px]  flex relative md:flex-row flex-col '>
-      <div>
+    <div className='md:pt-8 pt-10 p-3 md:px-52 max-w-screen md:h-screen h-[1000px] flex flex-col md:flex-row items-center gap-10  relative'>
+      <div className='flex-1 flex-grow md:pt-40'>
         <h1 className='text-slate-600 tracking-widest font-semibold text-xl md:text-2xl'>WELCOME TO MY WORLD</h1>
         <h2 className={`font-bold text-3xl md:text-5xl pt-5 ${isDarkMode?"text-white":"text-black"}`}>Hii I'm <span className='text-red-400'>Taniya Kamboj</span></h2>
         <h3 className='font-semibold text-3xl md:ext-5xl pt-5'><span className='text-red-400'>a</span><span className='bg-gradient-to-r from-slate-600 to-red-300 text-transparent   bg-clip-text '>  <TypeAnimation
@@ -26,27 +27,42 @@ const Landing = () => {
       style={{  display: 'inline-block' }}
       repeat={Infinity}
     /></span></h3>
-        <div className={`inline-block w-9/12 md:w-7/12 pt-6 text-slate-700 ${isDarkMode?"text-slate-50":"text-slate-700"}`}>
+        <div className={`inline-block w-9/12 md:w-11/12 pt-6  ${isDarkMode?"text-slate-200":"text-slate-700"}`}>
         <p>Hi, I'm Taniya, an MCA graduate and a passionate MERN Stack developer. I love building sleek, high-performance web applications that blend creativity with functionality. Whether it's crafting intuitive user interfaces or optimizing backend efficiency, I thrive on turning ideas into reality. Let’s build something amazing together!"</p>
         </div>
-        <div className='flex justify-between w-7/12 pt-9 md:pt-24'>
+        <div className="flex flex-col gap-7">
+        <div className='flex justify-between w-8/12 md:w-12/12 pt-9 md:pt-24'>
             <div className={isDarkMode?"text-slate-50":"text-black"}>
                 <h4>Find  Me On</h4>
                 <div className='flex gap-1 md:p-2 md:gap-5 '>
                     <div  className='md:w-12 w-7 h-7 md:h-12 border shadow-lg rounded-md bg-slate-100 p-1'>
+                      < a href='https://www.facebook.com/share/1D9tqSGirB/'
+            type='button'
+            target='_blank'
+            rel='noopener noreferrer'>
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="" height="" viewBox="0 0 24 24">
 <path d="M12 3A9 9 0 1 0 12 21A9 9 0 1 0 12 3Z" opacity=".3"></path><g opacity=".3"><path d="M20.949 12.951c.001-.013.004-.025.005-.038C20.953 12.925 20.95 12.938 20.949 12.951zM3.046 12.909c.002.017.005.034.007.051C3.051 12.944 3.047 12.927 3.046 12.909zM13.218 14.385h2.329l.366-2.366h-2.695v-1.293c0-.983.321-1.854 1.241-1.854h1.477V6.807c-.26-.035-.809-.112-1.846-.112-2.166 0-3.436 1.144-3.436 3.75v1.574H8.427v2.366h2.227v6.503C11.095 20.955 11.541 21 12 21c.414 0 .819-.038 1.218-.092V14.385z"></path></g><path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M12 3A9 9 0 1 0 12 21A9 9 0 1 0 12 3Z"></path><path d="M20.949 12.951c.001-.013.004-.025.005-.038C20.953 12.925 20.95 12.938 20.949 12.951zM3.046 12.909c.002.017.005.034.007.051C3.051 12.944 3.047 12.927 3.046 12.909zM13.218 14.385h2.329l.366-2.366h-2.695v-1.293c0-.983.321-1.854 1.241-1.854h1.477V6.807c-.26-.035-.809-.112-1.846-.112-2.166 0-3.436 1.144-3.436 3.75v1.574H8.427v2.366h2.227v6.503C11.095 20.955 11.541 21 12 21c.414 0 .819-.038 1.218-.092V14.385z"></path>
-</svg>  
+</svg>  </a>
                     </div>
-                    <div  className='md:w-12 w-7 h-7 md:h-12 border shadow-lg rounded-md  bg-slate-100 p-1'>  
+                    <div  className='md:w-12 w-7 h-7 md:h-12 border shadow-lg rounded-md  bg-slate-100 p-1'>
+                    <a
+            href='https://www.instagram.com/taniyakamboj7?igsh=Y3hhZWp3dnMyYjJk'
+            type='button'
+            target='_blank'
+            rel='noopener noreferrer'>
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="" height="" viewBox="0 0 24 24">
 <path d="M16,4H8C5.791,4,4,5.791,4,8v8c0,2.209,1.791,4,4,4h8c2.209,0,4-1.791,4-4V8C20,5.791,18.209,4,16,4z M12,16c-2.209,0-4-1.791-4-4c0-2.209,1.791-4,4-4s4,1.791,4,4C16,14.209,14.209,16,12,16z" opacity=".3"></path><path d="M16,3H8C5.243,3,3,5.243,3,8v8c0,2.757,2.243,5,5,5h8c2.757,0,5-2.243,5-5V8C21,5.243,18.757,3,16,3z M19,16c0,1.654-1.346,3-3,3H8c-1.654,0-3-1.346-3-3V8c0-1.654,1.346-3,3-3h8c1.654,0,3,1.346,3,3V16z"></path><path d="M12 7c-2.757 0-5 2.243-5 5s2.243 5 5 5 5-2.243 5-5S14.757 7 12 7zM12 15c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3S13.654 15 12 15zM17 6A1 1 0 1 0 17 8 1 1 0 1 0 17 6z"></path>
-</svg>  
+</svg>  </a>
                     </div>
                     <div  className='md:w-12 w-7 h-7 md:h-12 border shadow-lg rounded-md  bg-slate-100 p-1'> 
+                    <a
+                    target='_blank'
+            href='https://www.linkedin.com/in/taniya-kamboj-282058276/'
+            type='button'
+            rel='noopener noreferrer'>
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="" height="" viewBox="0 0 24 24">
 <path d="M19,20H5c-0.552,0-1-0.448-1-1V5c0-0.552,0.448-1,1-1h14c0.552,0,1,0.448,1,1v14C20,19.552,19.552,20,19,20z" opacity=".3"></path><path d="M9,17H6.477v-7H9V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"></path><path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M19,19H5V5h14V19z"></path>
-</svg>   
+</svg>   </a>
                     </div>
                     
                     
@@ -73,9 +89,36 @@ const Landing = () => {
                 </div>
             </div>
         </div>
+        <button
+              type='button'
+              className='mt-8 px-5 py-3 w-fit bg-red-400 rounded-md text-white shadow-lg shadow-zinc-600 transform active:scale-x-75 transition-transform mx-5 flex items-center animate-bounce'
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "mycv";
+                link.download = "Taniya-CV";
+                link.click();
+              }}
+            >
+              <svg
+                className='h-6 w-6'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
+                  d='M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4'
+                />
+              </svg>
+              <span className='ml-2'>Download CV</span>
+            </button>
         </div>
-        <div className=' absolute  md:pl-[600px] md:pt-0 pt-[500px]'>
-        <img className='md:w-[500px] w-[350px] md:h-[500px] h-[400px] mask-image object-cover hover:scale-110' src="https://img.freepik.com/free-photo/happy-latin-businesswoman-standing-with-arms-crossed-against-isolated-background_662251-639.jpg"></img>
+
+        </div>
+        <div className=' flex-1 flex justify-end'>
+        <img className='md:w-[500px] w-[350px]  mask-image object-top object-cover hover:scale-110' src={Myprofile}></img>
         </div>
     </div>
   )
